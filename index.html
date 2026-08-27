@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanan Classes | Home Tutors &amp; Online Tuition for Classes 1–12</title>
+<title>Kanan Classes | Quality Tuition & Home Tutors</title>
 <meta name="description" content="Find experienced home and online tutors with Kanan Classes. Personalized tuition for students from Class 1 to 12 with free demo classes.">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Kanan Classes | Home Tutors & Online Tuition for Classes 1–12">
+<meta property="og:title" content="Kanan Classes | Quality Tuition & Home Tutors">
 <meta property="og:description" content="Find experienced home and online tutors with Kanan Classes. Personalized tuition for students from Class 1 to 12 with free demo classes.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/og-image.png">
@@ -19,6 +19,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- Apply saved theme before paint to avoid a flash of the wrong theme -->
+<script>
+  (function(){
+    var saved = localStorage.getItem("kanan-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
 </head>
 <body>
 
@@ -27,7 +36,7 @@
 <!-- ============ NAVBAR ============ -->
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
-    <a href="#home" class="brand" aria-label="Kanan Classes home">
+    <a href="#home" class="brand nav-anchor" aria-label="Kanan Classes home">
       <span class="brand__mark" aria-hidden="true">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="8" fill="#54D98C"/>
@@ -38,22 +47,31 @@
     </a>
 
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#how-it-works" class="nav-link">How It Works</a>
-      <a href="#subjects" class="nav-link">Subjects</a>
-      <a href="#tutors" class="nav-link">Tutors</a>
-      <a href="#reviews" class="nav-link">Reviews</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#home" class="nav-link nav-anchor">Home</a>
+      <a href="#how-it-works" class="nav-link nav-anchor">How It Works</a>
+      <a href="#subjects" class="nav-link nav-anchor">Subjects</a>
+      <a href="#tutors" class="nav-link nav-anchor">Tutors</a>
+      <a href="#reviews" class="nav-link nav-anchor">Reviews</a>
+      <a href="#about" class="nav-link nav-anchor">About</a>
+      <a href="#contact" class="nav-link nav-anchor">Contact</a>
     </nav>
 
     <div class="navbar__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode">
+        <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M2.5 12H5M19 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1110.2 4a6.8 6.8 0 009.8 10.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </button>
       <a href="#" class="btn btn--ghost btn--sm" id="callBtnNav" aria-label="Call Kanan Classes">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
         Call Us
       </a>
       <a href="#" class="btn btn--primary btn--sm" id="demoBtnNav">Book Free Demo</a>
     </div>
+
+    <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Switch to light mode">
+      <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M2.5 12H5M19 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1110.2 4a6.8 6.8 0 009.8 10.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+    </button>
 
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -63,13 +81,13 @@
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <nav aria-label="Mobile Primary">
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#how-it-works" class="mobile-link">How It Works</a>
-      <a href="#subjects" class="mobile-link">Subjects</a>
-      <a href="#tutors" class="mobile-link">Tutors</a>
-      <a href="#reviews" class="mobile-link">Reviews</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#home" class="mobile-link nav-anchor">Home</a>
+      <a href="#how-it-works" class="mobile-link nav-anchor">How It Works</a>
+      <a href="#subjects" class="mobile-link nav-anchor">Subjects</a>
+      <a href="#tutors" class="mobile-link nav-anchor">Tutors</a>
+      <a href="#reviews" class="mobile-link nav-anchor">Reviews</a>
+      <a href="#about" class="mobile-link nav-anchor">About</a>
+      <a href="#contact" class="mobile-link nav-anchor">Contact</a>
     </nav>
     <div class="mobile-menu__actions">
       <a href="#" class="btn btn--ghost btn--block" id="callBtnMobile">Call Us</a>
@@ -86,14 +104,14 @@
     <div class="container hero__inner">
       <div class="hero__content reveal">
         <p class="eyebrow">Personalized Learning · Trusted Tutors</p>
-        <h1 class="hero__title">The Right Tutor. <em>The Right Learning.</em> The Right Results.</h1>
-        <p class="hero__sub">Find experienced home and online tutors for Classes 1–12, personalized to your child's learning needs.</p>
+        <h1 class="hero__title">Learn Better. <em>Grow Faster.</em></h1>
+        <p class="hero__sub">Quality Education with the Right Tutor. Kanan Classes connects students with expert home and online tutors for complete tuition support.</p>
 
         <div class="hero__tags">
           <span class="tag">Home Tuition</span>
           <span class="tag">Online Classes</span>
-          <span class="tag">Experienced Tutors</span>
-          <span class="tag">Free Demo</span>
+          <span class="tag">Classes 1–12</span>
+          <span class="tag">Computer Science</span>
         </div>
 
         <div class="hero__ctas">
@@ -104,29 +122,97 @@
       </div>
 
       <div class="hero__visual reveal" aria-hidden="true">
+        <svg class="hero__illustration" viewBox="0 0 560 500" xmlns="http://www.w3.org/2000/svg">
+          <!-- dot grid decoration -->
+          <g fill="var(--mint)" opacity="0.5">
+            <circle cx="20" cy="20" r="2"/><circle cx="36" cy="20" r="2"/><circle cx="52" cy="20" r="2"/><circle cx="68" cy="20" r="2"/>
+            <circle cx="20" cy="36" r="2"/><circle cx="36" cy="36" r="2"/><circle cx="52" cy="36" r="2"/><circle cx="68" cy="36" r="2"/>
+            <circle cx="20" cy="52" r="2"/><circle cx="36" cy="52" r="2"/><circle cx="52" cy="52" r="2"/><circle cx="68" cy="52" r="2"/>
+          </g>
+          <!-- ambient glow -->
+          <ellipse cx="300" cy="260" rx="230" ry="200" fill="url(#heroGlow)"/>
+          <!-- isometric platform -->
+          <g>
+            <ellipse cx="290" cy="400" rx="190" ry="58" fill="var(--mint)" opacity="0.14"/>
+            <path d="M120 380 L290 320 L460 380 L290 440 Z" fill="url(#platformGrad)" stroke="var(--border-strong)" stroke-width="1"/>
+            <path d="M120 380 L290 440 L290 460 L120 400 Z" fill="var(--card)" opacity="0.9"/>
+            <path d="M460 380 L290 440 L290 460 L460 400 Z" fill="var(--card-hover)" opacity="0.9"/>
+          </g>
+          <!-- graduation cap -->
+          <g transform="translate(230,150)">
+            <path d="M60 0 L120 24 L60 48 L0 24 Z" fill="var(--mint)"/>
+            <path d="M30 32 V56 C30 68 90 68 90 56 V32" stroke="var(--mint-dim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <line x1="118" y1="24" x2="118" y2="58" stroke="var(--mint)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="118" cy="62" r="4" fill="var(--mint)"/>
+          </g>
+          <!-- stacked books -->
+          <g transform="translate(150,330)">
+            <rect x="0" y="16" width="86" height="16" rx="3" fill="#F2B94A"/>
+            <rect x="6" y="0" width="74" height="16" rx="3" fill="var(--mint)"/>
+          </g>
+          <!-- laptop -->
+          <g transform="translate(300,320)">
+            <rect x="0" y="0" width="90" height="56" rx="6" fill="var(--card)" stroke="var(--border-strong)" stroke-width="1.5"/>
+            <rect x="8" y="8" width="74" height="40" rx="2" fill="var(--bg-alt)"/>
+            <path d="M10 44 L36 20 L52 34 L78 12" stroke="var(--mint)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="-6" y="56" width="102" height="8" rx="3" fill="var(--border-strong)"/>
+          </g>
+          <!-- growth chart card -->
+          <g transform="translate(360,120)">
+            <rect x="0" y="0" width="110" height="90" rx="14" fill="var(--card)" stroke="var(--border)" stroke-width="1.5"/>
+            <path d="M18 65 L40 45 L58 55 L92 20" stroke="var(--mint)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M78 20 H92 V34" stroke="var(--mint)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <!-- lightbulb -->
+          <g transform="translate(70,230)">
+            <circle cx="26" cy="26" r="26" fill="var(--mint-tint)"/>
+            <path d="M26 12 a12 12 0 00-7 22 v4 h14 v-4 a12 12 0 00-7-22z" fill="var(--mint)"/>
+            <rect x="21" y="40" width="10" height="6" rx="2" fill="var(--mint-dim)"/>
+          </g>
+          <!-- floating papers -->
+          <g transform="translate(420,250) rotate(12)">
+            <rect width="46" height="58" rx="4" fill="var(--card)" stroke="var(--border-strong)" stroke-width="1.2"/>
+            <line x1="8" y1="14" x2="38" y2="14" stroke="var(--text-faint)" stroke-width="2"/>
+            <line x1="8" y1="24" x2="38" y2="24" stroke="var(--text-faint)" stroke-width="2"/>
+            <line x1="8" y1="34" x2="28" y2="34" stroke="var(--text-faint)" stroke-width="2"/>
+          </g>
+          <!-- pencil -->
+          <g transform="translate(80,300) rotate(-30)">
+            <rect width="14" height="70" rx="3" fill="var(--mint)"/>
+            <path d="M0 70 L14 70 L7 84 Z" fill="#D9A066"/>
+            <rect y="-8" width="14" height="10" rx="2" fill="var(--mint-dim)"/>
+          </g>
+
+          <defs>
+            <radialGradient id="heroGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%" stop-color="var(--mint)" stop-opacity="0.16"/>
+              <stop offset="100%" stop-color="var(--mint)" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="platformGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--card-hover)"/>
+              <stop offset="100%" stop-color="var(--card)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div class="float-card float-card--main">
           <div class="float-card__row">
             <div class="avatar">PS</div>
             <div>
-              <p class="float-card__name">Dr. Priya Sharma</p>
-              <p class="float-card__meta">Mathematics · IIT JEE</p>
+              <p class="float-card__name">Chanchal Chaudhary</p>
+              <p class="float-card__meta">Mathematics </p>
             </div>
             <span class="badge badge--verified">Verified</span>
           </div>
           <div class="float-card__stats">
-            <div><span>12 yrs</span><small>Experience</small></div>
+            <div><span>16 yrs</span><small>Experience</small></div>
             <div><span>4.9 ★</span><small>Rating</small></div>
             <div><span>Delhi</span><small>Location</small></div>
           </div>
         </div>
 
-        <div class="float-card float-card--secondary">
-          <p class="float-card__subject">Physics</p>
-          <p class="float-card__count">Tutors available</p>
-        </div>
-
         <div class="float-card float-card--tertiary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="#54D98C" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="#54D98C" stroke-width="1.6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="var(--mint)" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke="var(--mint)" stroke-width="1.6"/></svg>
           <div>
             <p class="float-card__name" style="margin:0;">Free Demo Class</p>
             <p class="float-card__meta" style="margin:0;">Before you commit</p>
@@ -174,10 +260,6 @@
           <p>Once you're comfortable, begin regular personalized learning.</p>
         </div>
       </div>
-
-      <div class="section__cta reveal">
-        <a href="#" class="btn btn--primary btn--lg" id="getStartedBtn">Get Started Free →</a>
-      </div>
     </div>
   </section>
 
@@ -191,12 +273,12 @@
           <p class="audience-card__text">Find reliable home or online tuition for your child's learning needs.</p>
           <ul class="check-list">
             <li>Classes 1–12</li>
-            <li>Experienced tutors</li>
+            <li>Computer Science & Programming</li>
             <li>Home &amp; online options</li>
             <li>Personalized learning</li>
             <li>Free demo</li>
           </ul>
-          <a href="#" class="btn btn--primary" id="findTutorBtnAudience">Find a Tutor →</a>
+          <a href="#" class="btn btn--primary" id="findTutorBtnAudience">Find Your Tutor →</a>
         </div>
 
         <div class="audience-connector reveal" aria-hidden="true">
@@ -208,16 +290,16 @@
 
         <div class="audience-card audience-card--tutor reveal">
           <p class="eyebrow">For Tutors</p>
-          <h3>Want to Teach With Us?</h3>
+          <h3>Are You a Tutor? Join Us</h3>
           <p class="audience-card__text">Join the Kanan Classes tutor network and connect with students looking for quality education.</p>
           <ul class="check-list">
             <li>Get student leads</li>
             <li>Flexible teaching options</li>
-            <li>Home &amp; online teaching</li>
-            <li>Build your teaching profile</li>
-            <li>Grow your tutoring opportunities</li>
+            <li>Online/offline possibilities</li>
+            <li>Multiple subjects</li>
+            <li>Professional platform</li>
           </ul>
-          <a href="#" class="btn btn--outline" id="joinTutorBtnAudience">Join as a Tutor →</a>
+          <a href="#" class="btn btn--outline" id="joinTutorBtnAudience">Register as Tutor →</a>
         </div>
       </div>
     </div>
@@ -227,9 +309,9 @@
   <section class="section" id="subjects">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">Explore Subjects</p>
+        <p class="eyebrow">Explore Subjects & Courses</p>
         <h2 class="section__title">Quality Learning, Subject by Subject</h2>
-        <p class="section__sub">Quality learning support across school and competitive subjects.</p>
+        <p class="section__sub">Quality learning support across school, competitive subjects, and technical skills.</p>
       </div>
       <div class="subject-grid" id="subjectGrid"><!-- populated by JS --></div>
     </div>
@@ -241,7 +323,7 @@
       <div class="section__head reveal">
         <p class="eyebrow">Demo Profiles</p>
         <h2 class="section__title">Meet Our Featured Tutors</h2>
-        <p class="section__sub">Learn from experienced educators who are passionate about teaching. <em>(Sample profiles shown for illustration — real tutor data will replace this.)</em></p>
+        <p class="section__sub">Learn from experienced educators who are passionate about teaching.</p>
       </div>
       <div class="tutor-grid" id="tutorGrid"><!-- populated by JS --></div>
       <div class="section__cta reveal">
@@ -261,48 +343,33 @@
         <div class="feature-card reveal">
           <div class="feature-card__icon">🎓</div>
           <h3>Experienced Tutors</h3>
-          <p>Learn from educators with relevant teaching experience.</p>
+          <p>Learn from dedicated and knowledgeable teachers.</p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-card__icon">✅</div>
-          <h3>Verified Profiles</h3>
-          <p>Tutor information can be reviewed before being added to the platform.</p>
-        </div>
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">🏠</div>
-          <h3>Home Tuition</h3>
-          <p>Get personalized learning support at home where available.</p>
+          <div class="feature-card__icon">🎯</div>
+          <h3>Personalized Learning</h3>
+          <p>Teaching based on individual student needs.</p>
         </div>
         <div class="feature-card reveal">
           <div class="feature-card__icon">💻</div>
-          <h3>Online Classes</h3>
-          <p>Learn from anywhere with online teaching options.</p>
+          <h3>Flexible Learning</h3>
+          <p>Online and offline learning options available.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">✅</div>
+          <h3>Trusted Platform</h3>
+          <p>A simple platform connecting students and tutors.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">📈</div>
+          <h3>Student Focused</h3>
+          <p>Learning outcomes and understanding come first.</p>
         </div>
         <div class="feature-card reveal">
           <div class="feature-card__icon">🆓</div>
           <h3>Free Demo</h3>
           <p>Experience the teaching approach before committing.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">🎯</div>
-          <h3>Personalized Matching</h3>
-          <p>We focus on matching students with tutors according to their requirements.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SERVICE AREAS ============ -->
-  <section class="section" id="locations">
-    <div class="container">
-      <div class="section__head reveal">
-        <p class="eyebrow">Where We Operate</p>
-        <h2 class="section__title">Tutors Where You Need Them</h2>
-        <p class="section__sub">Kanan Classes provides home tuition and online learning support. Share your location and requirements with us, and we'll help you find a suitable tutor.</p>
-      </div>
-      <div class="location-grid" id="locationGrid"><!-- populated by JS --></div>
-      <div class="section__cta reveal">
-        <a href="#" class="btn btn--primary btn--lg" id="findTutorBtnLocation">Find a Tutor Near You →</a>
       </div>
     </div>
   </section>
@@ -311,9 +378,8 @@
   <section class="section section--alt" id="reviews">
     <div class="container">
       <div class="section__head reveal">
-        <p class="eyebrow">Demo Testimonials</p>
+        <p class="eyebrow">Testimonials</p>
         <h2 class="section__title">What Parents &amp; Students Say</h2>
-        <p class="section__sub"><em>Sample reviews shown for illustration — replace with genuine testimonials once available.</em></p>
       </div>
 
       <div class="testimonials">
@@ -330,12 +396,12 @@
   <!-- ============ FREE DEMO CTA ============ -->
   <section class="cta-band">
     <div class="container cta-band__inner reveal">
-      <h2>Your Child Deserves the Right Learning Support.</h2>
-      <p>Tell us what you need and we'll help you find a suitable tutor.</p>
+      <h2>Not Sure Which Tutor Is Right for You?</h2>
+      <p>Book a Free Demo and Find the Right Learning Option.</p>
       <div class="cta-band__actions">
         <a href="#" class="btn btn--primary btn--lg" id="demoBtnBand">Book Free Demo →</a>
         <a href="#" class="btn btn--outline btn--lg" id="findTutorBtnBand">Find a Tutor →</a>
-        <a href="#" class="btn btn--ghost btn--lg" id="whatsappBtnBand">WhatsApp Us</a>
+        <a href="#" class="btn btn--ghost btn--lg" id="whatsappBtnBand">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -346,7 +412,7 @@
       <div class="reveal">
         <p class="eyebrow">About Kanan Classes</p>
         <h2 class="section__title">Focused on the Right Fit, Not Just Any Tutor</h2>
-        <p class="about-text">Kanan Classes is focused on helping students find the right learning support through experienced tutors, personalized guidance, home tuition and online classes. We connect families with tutors and stay involved from the first conversation through the first demo class.</p>
+        <p class="about-text">Kanan Classes is an educational platform focused on helping students find the right learning support through experienced tutors, personalized guidance, home tuition and online classes. We connect families with professional educators, prioritizing long-term learning outcomes.</p>
       </div>
     </div>
   </section>
@@ -362,19 +428,19 @@
 
       <div class="contact-card reveal">
         <div class="contact-card__row">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" stroke="#54D98C" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" stroke="var(--mint)" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <span id="contactPhone">Phone: —</span>
         </div>
         <div class="contact-card__row">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.5 3.5a8 8 0 10-13.6 8L3 20l8.6-.9a8 8 0 105.9-15.6z" stroke="#54D98C" stroke-width="1.6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17.5 3.5a8 8 0 10-13.6 8L3 20l8.6-.9a8 8 0 105.9-15.6z" stroke="var(--mint)" stroke-width="1.6"/></svg>
           <span id="contactWhatsapp">WhatsApp: —</span>
         </div>
         <div class="contact-card__row">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3V6z" stroke="#54D98C" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="#54D98C" stroke-width="1.6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3V6z" stroke="var(--mint)" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="var(--mint)" stroke-width="1.6"/></svg>
           <span id="contactEmail">Email: —</span>
         </div>
         <div class="contact-card__row">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#54D98C" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#54D98C" stroke-width="1.6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="var(--mint)" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="var(--mint)" stroke-width="1.6"/></svg>
           <span id="contactLocation">Location: —</span>
         </div>
 
@@ -393,8 +459,9 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a href="#home" class="brand">
+      <a href="#home" class="brand nav-anchor">
         <span class="brand__mark" aria-hidden="true">
+          <img src="pic1.png" alt="Kanan Classes Logo">
           <svg width="28" height="28" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="30" height="30" rx="8" fill="#54D98C"/>
             <path d="M9 8V22M9 15L18 8M9 15L18 22" stroke="#0A0B0D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -408,13 +475,13 @@
 
     <div class="footer__col">
       <h4>Quick Links</h4>
-      <a href="#home">Home</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#tutors">Tutors</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="nav-anchor">Home</a>
+      <a href="#how-it-works" class="nav-anchor">How It Works</a>
+      <a href="#subjects" class="nav-anchor">Subjects</a>
+      <a href="#tutors" class="nav-anchor">Tutors</a>
+      <a href="#reviews" class="nav-anchor">Reviews</a>
+      <a href="#about" class="nav-anchor">About</a>
+      <a href="#contact" class="nav-anchor">Contact</a>
     </div>
 
     <div class="footer__col">
@@ -445,6 +512,10 @@
   <span class="whatsapp-fab__tooltip">Chat with Kanan Classes</span>
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17.5 3.5a8 8 0 10-13.6 8L3 20l8.6-.9a8 8 0 105.9-15.6z" fill="#0A0B0D"/></svg>
 </a>
+
+<!-- ============ CUSTOM CURSOR (Desktop Only) ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
 <script src="script.js"></script>
 </body>

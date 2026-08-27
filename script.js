@@ -1,38 +1,31 @@
 /* =========================================================
    KANAN CLASSES — CONFIGURATION
-   Edit everything below to update the whole website.
    ========================================================= */
 const CONFIG = {
   // Google Forms — replace with your real form links
-  demoForm:   "https://docs.google.com/forms/d/e/1FAIpQLSdpJ4mzuC_vOhsML5DBqQGYkgAV-XCZOKz1oE8aOEWnwMr5rA/viewform?usp=publish-editor",
-  studentForm: "GOOGLE_STUDENT_FORM_URLhttps://docs.google.com/forms/d/e/1FAIpQLSdpJ4mzuC_vOhsML5DBqQGYkgAV-XCZOKz1oE8aOEWnwMr5rA/viewform?usp=publish-editor",
+  demoForm:   "https://docs.google.com/forms/d/e/1FAIpQLSfLKgrwHeawTZ9hCHzoSkhwF5savs_YOzOOeQ2efI4bCQIyVg/viewform?usp=header",
+  studentForm: "https://docs.google.com/forms/d/e/1FAIpQLSfLKgrwHeawTZ9hCHzoSkhwF5savs_YOzOOeQ2efI4bCQIyVg/viewform?usp=header",
   tutorForm:  "https://docs.google.com/forms/d/e/1FAIpQLSdpJ4mzuC_vOhsML5DBqQGYkgAV-XCZOKz1oE8aOEWnwMr5rA/viewform?usp=publish-editor",
 
   // Contact details — replace placeholders with real information
-  phone:     "YOUR_PHONE_NUMBER",     // e.g. "+917982466953"
-  whatsapp:  "YOUR_WHATSAPP_NUMBER",  // e.g. "+917982466953" (no + or spaces)
+  phone:     "+917982466953",     // e.g. "917982466953"
+  whatsapp:  "+917982466953",  // e.g. "917982466953"
   email:     "chanchalchoudhary1993us@gmail.com",
-  location:  "YOUR_LOCATION",
+  location:  "Delhi, India",
 
   // Social links — leave empty ("") to auto-hide the icon
-  instagram:      "",
-  facebook:        "",
-  youtube:         "",
-  googleBusiness:  "",
+  instagram:      "PASTE_INSTAGRAM_LINK_HERE",
+  facebook:       "PASTE_FACEBOOK_LINK_HERE",
+  youtube:        "https://www.youtube.com/@kdMasterclasses",
+  googleBusiness: "",
 
-  // Trust strip stats — placeholders, update with verified numbers
-  stats: [
-    { num: "500+", label: "Students Guided" },
-    { num: "50+",  label: "Tutors" },
-    { num: "10+",  label: "Subjects" },
-    { num: "1–12", label: "Classes Covered" }
-  ],
-
-  // Service areas — edit freely, only list areas actually served
-  locations: [
-    "Delhi", "Noida", "Greater Noida", "Ghaziabad",
-    "Gurugram", "Faridabad", "Online — All India"
-  ]
+  // Statistics for animation
+  stats: {
+    students: 100,
+    tutors: 50,
+    subjects: 10,
+    satisfaction: 95
+  }
 };
 
 /* =========================================================
@@ -55,12 +48,12 @@ const SUBJECTS = [
 ];
 
 const TUTORS = [
-  { initials:"PS", name:"Dr. Priya Sharma", subject:"Mathematics", classes:"Classes 11–12, IIT JEE", experience:"12 years", location:"Delhi", mode:"Home & Online", rating:"4.9", reviews:38 },
-  { initials:"RV", name:"Rahul Verma",       subject:"Physics",     classes:"Classes 9–12, NEET",     experience:"8 years",  location:"Bangalore", mode:"Online", rating:"4.8", reviews:24 },
-  { initials:"AD", name:"Anjali Desai",      subject:"Chemistry",   classes:"Classes 11–12, JEE",     experience:"10 years", location:"Mumbai", mode:"Home & Online", rating:"4.9", reviews:31 },
-  { initials:"VS", name:"Vikram Singh",      subject:"English",     classes:"Classes 6–12",           experience:"6 years",  location:"Hyderabad", mode:"Online", rating:"4.7", reviews:19 },
-  { initials:"MK", name:"Meera Krishnan",    subject:"Biology",     classes:"Classes 9–12, NEET",     experience:"9 years",  location:"Chennai", mode:"Home & Online", rating:"4.8", reviews:27 },
-  { initials:"AP", name:"Arjun Patel",       subject:"Computer Science", classes:"Classes 11–12, College", experience:"7 years", location:"Pune", mode:"Online", rating:"4.9", reviews:22 }
+  { initials:"PS", name:"Chanchal Chaudhary", subject:"Mathematics", classes:"Classes 6–10", experience:"16 years", location:"Delhi", mode:"Home & Online", rating:"5.0", reviews:68 },
+  { initials:"RV", name:"Rahul Verma",       subject:"Physics",     classes:"Classes 9–12",     experience:"8 years",  location:"Noida", mode:"Online", rating:"4.8", reviews:24 },
+  { initials:"AD", name:"Anjali Desai",      subject:"Chemistry",   classes:"Classes 11–12, JEE",     experience:"10 years", location:"Ghaziabad", mode:"Home & Online", rating:"4.9", reviews:31 },
+  { initials:"VS", name:"Vikram Singh",      subject:"English",     classes:"Classes 6–12",           experience:"6 years",  location:"Delhi", mode:"Home & Online", rating:"4.7", reviews:19 },
+  { initials:"MK", name:"Meera Krishnan",    subject:"Biology",     classes:"Classes 9–12, NEET",     experience:"9 years",  location:"Gurgaon", mode:"Home & Online", rating:"4.8", reviews:27 },
+  { initials:"AP", name:"Akhil Anand",       subject:"Computer Science", classes:"Classes 9–12", experience:"4 years", location:"Delhi", mode:"Home & Online", rating:"4.9", reviews:22 }
 ];
 
 const TESTIMONIALS = [
@@ -72,26 +65,27 @@ const TESTIMONIALS = [
   { text:"Kanan Classes was responsive from the first message and followed up until we were matched with a tutor.", name:"Parent of Class 12 Student", meta:"Biology · NEET" }
 ];
 
+
 /* =========================================================
    HELPERS
    ========================================================= */
 function openForm(url){
-  if (!url || url.startsWith("GOOGLE_")) {
+  if (!url || url.includes("YOUR_") || url.includes("PASTE_")) {
     console.warn("Kanan Classes: form URL not configured yet.");
-    alert("This form link hasn't been set up yet. Please add your Google Form URL in CONFIG (script.js).");
+    alert("This link hasn't been set up yet. Please add your URL in the script.js CONFIG.");
     return;
   }
   window.open(url, "_blank", "noopener");
 }
 
 function buildWhatsAppLink(){
-  const message = encodeURIComponent("Hello Kanan Classes, I am interested in a free demo class.");
-  const number = CONFIG.whatsapp && !CONFIG.whatsapp.startsWith("YOUR_") ? CONFIG.whatsapp : "";
-  return `https://wa.me/${number}?text=${message}`;
+  const message = encodeURIComponent("Hello Kanan Classes, I want to know more about your tuition classes.");
+  const number = CONFIG.whatsapp && !CONFIG.whatsapp.includes("YOUR_") && !CONFIG.whatsapp.includes("PASTE_") ? CONFIG.whatsapp : "";
+  return number.startsWith("http") ? number : `https://wa.me/${number}?text=${message}`;
 }
 
 function buildCallLink(){
-  const num = CONFIG.phone && !CONFIG.phone.startsWith("YOUR_") ? CONFIG.phone : "";
+  const num = CONFIG.phone && !CONFIG.phone.includes("YOUR_") ? CONFIG.phone : "";
   return `tel:${num}`;
 }
 
@@ -100,7 +94,7 @@ function buildCallLink(){
    ========================================================= */
 function wireCTAs(){
   const demoIds   = ["demoBtnNav","demoBtnMobile","demoBtnHero","getStartedBtn","demoBtnBand","demoBtnContact","demoLinkFooter"];
-  const studentIds= ["findTutorBtnHero","findTutorBtnAudience","findTutorBtnLocation","findTutorBtnBand","findTutorLinkFooter"];
+  const studentIds= ["findTutorBtnHero","findTutorBtnAudience","findTutorBtnBand","findTutorLinkFooter"];
   const tutorIds  = ["joinTutorLinkHero","joinTutorBtnAudience","joinTutorBtnTutors","joinTutorLinkFooter"];
   const callIds   = ["callBtnNav","callBtnMobile","callBtnContact"];
   const waIds     = ["whatsappBtnBand","whatsappBtnContact","whatsappFab"];
@@ -128,21 +122,62 @@ function wireCTAs(){
 }
 
 /* =========================================================
-   RENDER: Trust strip
+   RENDER & ANIMATE: Trust strip (Counters)
    ========================================================= */
 function renderTrustStrip(){
   const grid = document.getElementById("trustStripGrid");
   if (!grid) return;
-  grid.innerHTML = CONFIG.stats.map(s => `
+  
+  const statsArray = [
+    { target: CONFIG.stats.students, label: "Students", suffix: "+" },
+    { target: CONFIG.stats.tutors, label: "Tutors", suffix: "+" },
+    { target: CONFIG.stats.subjects, label: "Subjects", suffix: "+" },
+    { target: CONFIG.stats.satisfaction, label: "Satisfaction", suffix: "%" }
+  ];
+
+  grid.innerHTML = statsArray.map(s => `
     <div class="trust-stat">
-      <span class="trust-stat__num">${s.num}</span>
+      <span class="trust-stat__num counter-val" data-target="${s.target}" data-suffix="${s.suffix}">0${s.suffix}</span>
       <span class="trust-stat__label">${s.label}</span>
     </div>
   `).join("");
 }
 
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter-val');
+  if(!counters.length || !("IntersectionObserver" in window)) return;
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'));
+        const suffix = el.getAttribute('data-suffix');
+        let count = 0;
+        
+        // Duration of 1.5s approx
+        const speed = Math.ceil(target / 45); 
+        
+        const updateCount = () => {
+          count += speed;
+          if (count < target) {
+            el.innerText = count + suffix;
+            requestAnimationFrame(updateCount);
+          } else {
+            el.innerText = target + suffix;
+          }
+        };
+        updateCount();
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  counters.forEach(counter => observer.observe(counter));
+}
+
 /* =========================================================
-   RENDER: Subjects
+   RENDER: Subjects, Tutors, Socials, Contact
    ========================================================= */
 function renderSubjects(){
   const grid = document.getElementById("subjectGrid");
@@ -166,9 +201,6 @@ function renderSubjects(){
   });
 }
 
-/* =========================================================
-   RENDER: Tutors
-   ========================================================= */
 function renderTutors(){
   const grid = document.getElementById("tutorGrid");
   if (!grid) return;
@@ -177,14 +209,13 @@ function renderTutors(){
       <div class="tutor-card__head">
         <div class="tutor-card__avatar" aria-hidden="true">${t.initials}</div>
         <div>
-          <div class="tutor-card__name">${t.name} <span class="badge badge--verified">Verified*</span></div>
+          <div class="tutor-card__name">${t.name} <span class="badge badge--verified">Verified</span></div>
           <div class="tutor-card__subject">${t.subject}</div>
         </div>
       </div>
       <div class="tutor-card__details">
         <div class="tutor-card__detail"><span>Classes</span><span>${t.classes}</span></div>
         <div class="tutor-card__detail"><span>Experience</span><span>${t.experience}</span></div>
-        <div class="tutor-card__detail"><span>Location</span><span>${t.location}</span></div>
         <div class="tutor-card__detail"><span>Mode</span><span>${t.mode}</span></div>
       </div>
       <div class="tutor-card__rating">★★★★★ <strong>${t.rating}</strong> (${t.reviews} reviews)</div>
@@ -197,18 +228,6 @@ function renderTutors(){
   });
 }
 
-/* =========================================================
-   RENDER: Locations
-   ========================================================= */
-function renderLocations(){
-  const grid = document.getElementById("locationGrid");
-  if (!grid) return;
-  grid.innerHTML = CONFIG.locations.map(loc => `<div class="location-card">${loc}</div>`).join("");
-}
-
-/* =========================================================
-   RENDER: Footer socials
-   ========================================================= */
 function renderSocials(){
   const wrap = document.getElementById("footerSocials");
   if (!wrap) return;
@@ -225,25 +244,27 @@ function renderSocials(){
     { key:"instagram", url: CONFIG.instagram, label:"Instagram" },
     { key:"facebook", url: CONFIG.facebook, label:"Facebook" },
     { key:"youtube", url: CONFIG.youtube, label:"YouTube" },
-    { key:"whatsapp", url: CONFIG.whatsapp && !CONFIG.whatsapp.startsWith("YOUR_") ? buildWhatsAppLink() : "", label:"WhatsApp" },
+    { key:"whatsapp", url: CONFIG.whatsapp && !CONFIG.whatsapp.includes("YOUR_") && !CONFIG.whatsapp.includes("PASTE_") ? buildWhatsAppLink() : "", label:"WhatsApp" },
     { key:"googleBusiness", url: CONFIG.googleBusiness, label:"Google Business Profile" }
-  ].filter(l => l.url);
+  ].filter(l => l.url && !l.url.includes("PASTE_"));
 
   wrap.innerHTML = links.map(l => `
     <a class="social-icon" href="${l.url}" target="_blank" rel="noopener" aria-label="${l.label}">${icons[l.key]}</a>
   `).join("");
 }
 
-/* =========================================================
-   RENDER: Contact info
-   ========================================================= */
 function renderContactInfo(){
   const phone = document.getElementById("contactPhone");
   const wa = document.getElementById("contactWhatsapp");
   const email = document.getElementById("contactEmail");
   const loc = document.getElementById("contactLocation");
+  
   if (phone) phone.textContent = `Phone: ${CONFIG.phone}`;
-  if (wa) wa.textContent = `WhatsApp: ${CONFIG.whatsapp}`;
+  // Use plain number for text display if they provided a URL by accident, else just display what is in config
+  let cleanWA = CONFIG.whatsapp;
+  if(cleanWA.startsWith("http")) cleanWA = "Click button below";
+  if (wa) wa.textContent = `WhatsApp: ${cleanWA}`;
+  
   if (email) email.textContent = `Email: ${CONFIG.email}`;
   if (loc) loc.textContent = `Location: ${CONFIG.location}`;
 }
@@ -308,12 +329,14 @@ function restartTestimonialAutoplay(){
 }
 
 /* =========================================================
-   NAVBAR: mobile menu, sticky, active link
+   NAVBAR & SMOOTH SCROLL (With Sticky Header Offset)
    ========================================================= */
 function setupNavbar(){
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
+  const navbarHeight = 76; // Match CSS height
 
+  // Mobile menu logic
   function closeMenu(){
     mobileMenu.classList.remove("open");
     hamburger.setAttribute("aria-expanded", "false");
@@ -325,12 +348,28 @@ function setupNavbar(){
 
   hamburger.addEventListener("click", toggleMenu);
 
-  mobileMenu.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && mobileMenu.classList.contains("open")) closeMenu();
+  });
+
+  // JS-assisted smooth scroll for accurate offset
+  const anchorLinks = document.querySelectorAll('.nav-anchor');
+  anchorLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId.startsWith('#')) {
+        e.preventDefault();
+        closeMenu();
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
   });
 
   // Active nav link on scroll
@@ -341,7 +380,7 @@ function setupNavbar(){
     let current = "";
     sections.forEach(sec => {
       const rect = sec.getBoundingClientRect();
-      if (rect.top <= 120 && rect.bottom >= 120) current = sec.id;
+      if (rect.top <= (navbarHeight + 40) && rect.bottom >= (navbarHeight + 40)) current = sec.id;
     });
     navLinks.forEach(link => {
       link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
@@ -349,6 +388,83 @@ function setupNavbar(){
   }
   window.addEventListener("scroll", setActiveLink, { passive: true });
   setActiveLink();
+}
+
+/* =========================================================
+   THEME TOGGLE (light / dark)
+   ========================================================= */
+function setupThemeToggle(){
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById("themeToggle");
+  const toggleBtnMobile = document.getElementById("themeToggleMobile");
+
+  function applyTheme(theme){
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("kanan-theme", theme);
+    const label = theme === "light" ? "Switch to dark mode" : "Switch to light mode";
+    if (toggleBtn) toggleBtn.setAttribute("aria-label", label);
+    if (toggleBtnMobile) toggleBtnMobile.setAttribute("aria-label", label);
+  }
+
+  function toggleTheme(){
+    const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+    applyTheme(current === "light" ? "dark" : "light");
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener("click", toggleTheme);
+  if (toggleBtnMobile) toggleBtnMobile.addEventListener("click", toggleTheme);
+
+  applyTheme(root.getAttribute("data-theme") === "light" ? "light" : "dark");
+}
+
+/* =========================================================
+   PREMIUM CUSTOM CURSOR (Desktop Only)
+   ========================================================= */
+function setupCursor() {
+  // Only initialize on precise pointers (desktops/mice) to avoid messing up touch interfaces
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+  
+  const dot = document.getElementById("cursorDot");
+  const ring = document.getElementById("cursorRing");
+  if(!dot || !ring) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+  let isHovering = false;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  const render = () => {
+    // Linear interpolation for smooth ring trailing effect
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    
+    // Manage ring position without interrupting the CSS transition for scale
+    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
+    
+    requestAnimationFrame(render);
+  };
+  requestAnimationFrame(render);
+
+  // Hook into interactive elements
+  const interactiveElements = document.querySelectorAll("a, button, input, textarea, select, [role='button'], .nav-anchor");
+  interactiveElements.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      isHovering = true;
+      ring.classList.add("hover");
+    });
+    el.addEventListener("mouseleave", () => {
+      isHovering = false;
+      ring.classList.remove("hover");
+    });
+  });
 }
 
 /* =========================================================
@@ -392,13 +508,17 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTrustStrip();
   renderSubjects();
   renderTutors();
-  renderLocations();
   renderTestimonials();
   renderSocials();
   renderContactInfo();
 
   wireCTAs();
   setupNavbar();
+  setupThemeToggle();
   setupBackToTop();
   setupScrollReveal();
+  
+  // Delayed initialization for effects
+  setTimeout(animateCounters, 500);
+  setupCursor();
 });
